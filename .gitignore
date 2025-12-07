@@ -1,0 +1,45 @@
+# Unity Library and Builds
+Library/
+Builds/
+Temp/
+Obj/
+*.csproj
+*.sln
+*.userprefs
+*.user
+
+# Visual Studio Cache
+.vs/
+.vscode/
+
+# Local file system
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.swp
+*.swo
+
+# Compiled files
+*.dll
+*.exe
+*.pdb
+*.o
+*.so
+
+# Game Engine
+*.unitypackage
+*.apk
+*.ipa
+*.aab
+
+# Logs
+*.log
+Logs/
+
+# Project Settings files we don't want to track
+Assets/**/*.meta
+
+# OS files
+.gitattributes
+

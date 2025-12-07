@@ -1,0 +1,14 @@
+Task ID,Phase,Description,Est. Hours,Start Week,End Week,Status,% Progress,Comments
+RD-001,Phase 1: Core Driving & Input,Import Racing Game Creator 2; validate car physics on mid-range device,16,Week 1,Week 2,Backlog,0%,Sandbox test; check for Unity 6 shader issues
+RD-002,Phase 1: Core Driving & Input,Implement single-hand horizontal controls (left/right zones; double-tap fire trigger),24,Week 2,Week 4,Backlog,0%,Integrate InputManager; test on device with different hand orientations
+RD-003,Phase 1: Core Driving & Input,Implement boundary damage system and respawn penalty (lose weapons; 3s cooldown),20,Week 4,Week 6,Backlog,0%,Respawn at pit lane; update HUD feedback
+RD-004,Phase 1: Core Driving & Input,Optimize for 60 FPS on Snapdragon 660 / Helio G95,12,Week 6,Week 7,Backlog,0%,Profiling & LOD tuning
+RD-005,Phase 2: AI Baseline,Import Any Car AI v2.0; validate 7 AI opponents on track,12,Week 3,Week 4,Backlog,0%,Test pathfinding on 2–3 track variants
+RD-006,Phase 2: AI Baseline,Tune AI difficulty (3 tiers: Easy; Medium; Hard) via ScriptableObjects,16,Week 5,Week 7,Backlog,0%,Adjust speed; aggression; weapon usage patterns
+RD-007,Phase 2: AI Baseline,Implement AI weapon targeting and priority logic,12,Week 7,Week 8,Backlog,0%,Avoid friendly fire; target closest enemy
+RD-008,Phase 3: Weapons & VFX Integration,Build WeaponConfigSO (bullet type; fire rate; damage; VFX rot),8,Week 4,Week 5,Backlog,0%,Design 4–6 weapon types (cannon; machine gun; missile; freeze; boost)
+RD-009,Phase 3: Weapons & VFX Integration,Implement 3-slot weapon pickup system; weapon slot UI,16,Week 5,Week 7,Backlog,0%,Pickup detection; slot swap logic; visual feedback
+RD-010,Phase 3: Weapons & VFX Integration,Integrate Realistic Effects Pack 4 and Lightning VFX; add explosions; hit feedback,20,Week 7,Week 9,Backlog,0%,Optimize particle count; avoid FPS drops
+RD-011,Phase 3: Weapons & VFX Integration,Implement PowerupSpawner and despawn logic,12,Week 6,Week 8,Backlog,0%,Spawn on track segments; visual indicators
+RD-012,Phase 4: Race Loop & Game Flow,Build RaceManager: track laps; position; finish line detection,16,Week 8,Week 10,Backlog,0%,Handle 3 lap race; update HUD live
+RD-013,Phase 4: Race Loop & Game Flow,Implement race start countdown and finish / results flow,12,Week 10,Week 11,Backlog,0%,Show final standings; award coins & XP

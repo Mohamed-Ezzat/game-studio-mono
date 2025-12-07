@@ -1,0 +1,8 @@
+Game ID,Template Base,Genre,Target Scope,Planned Release,Actual Release,Status,D1 Ret %,D7 Ret %,eCPM $,Revenue $,Decision,% Progress,Notes
+HC-001,Weapon Fest,Top-down Shooter,Reskin + 2 weapons,-,-,Backlog,-,-,-,-,TBD,0%,High-trending template; simple reskin candidate
+HC-002,SaveHer (Rescue Puzzle),Puzzle,Core + 3 level packs,-,-,Backlog,-,-,-,-,TBD,0%,Proven mechanic; good retention baseline
+HC-003,Bubble Shooter Kit,Match / Bubble,Template + cosmetics,-,-,Backlog,-,-,-,-,TBD,0%,Proven genre; low-risk reskin
+HC-004,Candy Match 3 Kit v1.1.1,Match-3,Template + progression,-,-,Backlog,-,-,-,-,TBD,0%,Crowded genre; test high-retention focus
+HC-005,Bus Mania 100 BugFix,Arcade / Timing,Reskin + 20 levels,-,-,Backlog,-,-,-,-,TBD,0%,Bug fixed version; stable baseline
+HC-006,Hypercasual Runner Starter Kit v1.0.4,Runner,Reskin + obstacles,-,-,Backlog,-,-,-,-,TBD,0%,Popular genre; quick to adapt
+HC-007,Squad Shooter v_1.0.3,Casual Shooter,Waves + powerups,-,-,Backlog,-,-,-,-,TBD,0%,Action-heavy; good eCPM potential
