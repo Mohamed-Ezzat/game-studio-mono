@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed_player , horizontal_speed;
+    public float speed_player, horizontal_speed;
     public Rigidbody rb;
     Vector2 presspos, actualpos;
     public int counter;
     public float final_counter;
     public Car car_final;
-    public bool gamerun , is_final;
+    public bool gamerun, is_final;
     public GameObject pistols_parent;
     public List<GameObject> pistols;
     public GameObject[] weapons;
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
             final_counter -= Time.smoothDeltaTime * 100f;
             UiManager.instance.counter_ui((int)final_counter);
 
-            if(final_counter <= 0)
+            if (final_counter <= 0)
             {
                 rb.linearVelocity = Vector3.zero;
                 gamerun = false;
@@ -66,38 +66,35 @@ public class Player : MonoBehaviour
 
     void player_movements()
     {
+        // ===== KEYBOARD CONTROL (ARROW KEYS) =====
+        float horizontalInput = Input.GetAxis("Horizontal");
 
-        ////player move forward
-        //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed_player);
+        if (horizontalInput != 0)
+        {
+            Vector3 tmp = transform.position;
+            tmp.x += horizontalInput * Time.deltaTime * horizontal_speed;
+            tmp.x = Mathf.Clamp(tmp.x, -15, 15);
+            transform.position = tmp;
+        }
 
-        //if (!move_horizontal)
-        //    return;
-        // player move right & left
+        // ===== MOUSE/TAP CONTROL (COMMENTED OUT) =====
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             presspos = Input.mousePosition;
-            //is_tap = true;
         }
 
         if (Input.GetMouseButton(0))
         {
             actualpos = Input.mousePosition;
-
-            //float ss = actualpos.x - presspos.x;
-            //ss = Mathf.Clamp(ss, -5, 5);
-            //print(ss);
-
-            float xdiff = (actualpos.x - presspos.x) * Time.smoothDeltaTime * horizontal_speed;
-
+            float xdiff = (actualpos.x - presspos.x) * Time.deltaTime * horizontal_speed;
             Vector3 tmp = transform.position;
-
             tmp.x += xdiff;
             tmp.x = Mathf.Clamp(tmp.x, -15, 15);
             transform.position = tmp;
-
             presspos = actualpos;
         }
-
+        */
     }
 
     private void OnTriggerEnter(Collider other)
@@ -109,7 +106,7 @@ public class Player : MonoBehaviour
             UiManager.instance.show_lose();
         }
 
-        if (other.tag == "devil" )
+        if (other.tag == "devil")
         {
             if (other.GetComponent<DevilEnemy>().active)
             {
@@ -118,9 +115,9 @@ public class Player : MonoBehaviour
                 other.GetComponent<DevilEnemy>().anim.Play("attack");
                 UiManager.instance.show_lose();
             }
-            
+
         }
-        if(other.tag == "finish")
+        if (other.tag == "finish")
         {
             is_final = true;
             final_counter = counter;
@@ -128,14 +125,14 @@ public class Player : MonoBehaviour
             car_final.active = true;
             Destroy(other.gameObject);
         }
-        if (other.tag == "opera" )
+        if (other.tag == "opera")
         {
             OperationType op = other.GetComponent<OperationType>();
 
             if (!op.active)
                 return;
 
-            if(op.type == type_operation.increase)
+            if (op.type == type_operation.increase)
             {
                 counter += op.number;
 
@@ -211,7 +208,7 @@ public class Player : MonoBehaviour
 
         else
         {
-            
+
             for (int i = 0; i < pistols.Count; i++)
             {
                 pistols[i].transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
@@ -236,7 +233,7 @@ public class Player : MonoBehaviour
 
         for (int i = 0; i < cnt; i++)
         {
-            GameObject go =  Instantiate(weapons[GameManager.instance.getactivSkin()], pistols_parent.transform);
+            GameObject go = Instantiate(weapons[GameManager.instance.getactivSkin()], pistols_parent.transform);
             Vector3 tmp = go.transform.localPosition;
             tmp.x = pistols[i].transform.localPosition.x;
             tmp.z = pistols[i].transform.localPosition.z;
